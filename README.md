@@ -32,3 +32,8 @@ At the end of the program, the table is saved.
 4. HeatMapPokemon
 
 With the use of tablePokemonLocations, a heat map for each Pokemon can be made.
+
+
+5. Shiny App
+
+A Shiny App is available. You can choose a pokemon and the corresponding map is displayed.
