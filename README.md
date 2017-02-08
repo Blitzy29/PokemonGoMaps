@@ -1,6 +1,8 @@
 # PokemonGoMaps
 Heat maps of the locations of different types of Pokemon in Paris, from the PokemonGo game.
 
+Note: data has only be retrieved for 3 days in 2016 between 1pm and 6pm.
+
 Code in R.
 
 
