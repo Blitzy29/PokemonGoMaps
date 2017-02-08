@@ -1,4 +1,4 @@
-"nomPokemon" "latPokemon" "longPokemon" "date" "hour" "carreLong" "carreLat"
+"namePokemon" "latitude" "longitude" "date" "hour" "squareLong" "squareLat"
 "Zubat" 48.818653466506 2.2466914952411 "2016-07-28" 14 1 1
 "Zubat" 48.819349894441 2.251298171377 "2016-07-28" 14 1 1
 "Slowpoke" 48.822112351295 2.2507294526655 "2016-07-28" 14 1 2
