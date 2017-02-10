@@ -10,16 +10,22 @@ p_load(R.PersonalTools)
 p_load(R.Maps)
 
 tablePokemonLocations <- fread("data/tablePokemonLocations.txt")
-# interactiveListPokemon <- tablePokemonLocations[,sort(unique(namePokemon))]
+interactiveListPokemon <- tablePokemonLocations[,sort(unique(namePokemon))]
+# sapply(interactiveListPokemon,list)
 
 shinyServer(function(input, output) {
   
   output$map <- renderLeaflet({
-    pokemonChosen <- input$selectPokemon
     map <- leaflet()
     map %<>% addTiles()
     map %<>% SetMapView('Paris')
-    map %<>% AddHeatMap(tablePokemonLocations[namePokemon == pokemonChosen])
-  })
+    
+    tablePokemonLocationsPart <- tablePokemonLocations[namePokemon == input$selectPokemon]
+    
+    if (nrow(tablePokemonLocationsPart) > 1) {
+      map %<>% AddHeatMap(tablePokemonLocationsPart)
+    }
 
+  })
+  
 })

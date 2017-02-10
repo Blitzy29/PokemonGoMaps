@@ -16,9 +16,7 @@ shinyUI(fluidPage(
     sidebarPanel(
       
       selectInput("selectPokemon", label = h3("Select a Pokemon"), 
-                  choices = list("Pidgey","Rattata","Zubat","Spearow","Weedle","Magikarp",
-                                 "Caterpie","Pidgeotto","Krabby","Poliwag","Goldeen","Psyduck",
-                                 "Drowzee","Staryu"), selected = 1)
+                  choices = sapply(interactiveListPokemon,list), selected = 1)
       
     ),
     
