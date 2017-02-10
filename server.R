@@ -13,6 +13,8 @@ tablePokemonLocations <- fread("data/tablePokemonLocations.txt")
 interactiveListPokemon <- tablePokemonLocations[,sort(unique(namePokemon))]
 # sapply(interactiveListPokemon,list)
 
+pokeball <- makeIcon("www/pokeball.png",5,5)
+
 shinyServer(function(input, output) {
   
   output$map <- renderLeaflet({
@@ -24,6 +26,13 @@ shinyServer(function(input, output) {
     
     if (nrow(tablePokemonLocationsPart) > 1) {
       map %<>% AddHeatMap(tablePokemonLocationsPart)
+    }
+    
+    if (nrow(tablePokemonLocationsPart) > 0) {
+      map %<>% addMarkers(data=tablePokemonLocationsPart,
+                          ~longitude,
+                          ~latitude,
+                          icon=pokeball)
     }
 
   })
