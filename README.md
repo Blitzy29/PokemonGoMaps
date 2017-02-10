@@ -40,3 +40,8 @@ With the use of tablePokemonLocations, a heat map for each Pokemon can be made.
 
 A Shiny App is available. You can choose a pokemon and the corresponding map is displayed.
 
+Examples
+
+![alt tag](https://github.com/Blitzy29/PokemonGoMaps/blob/master/www/ExampleMagikarp.PNG)
+
+![alt tag](https://github.com/Blitzy29/PokemonGoMaps/blob/master/www/ExampleDrowzee.PNG)
