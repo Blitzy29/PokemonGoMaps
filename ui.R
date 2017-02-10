@@ -21,7 +21,8 @@ shinyUI(fluidPage(
     ),
     
     mainPanel(
-      leafletOutput("map")
+      leafletOutput("map"),
+      textOutput("sorry")
     )
     
   )

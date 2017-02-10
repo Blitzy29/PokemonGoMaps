@@ -28,4 +28,10 @@ shinyServer(function(input, output) {
 
   })
   
+  output$sorry <- renderText({
+    ifelse(nrow(tablePokemonLocations[namePokemon == input$selectPokemon]) == 0,
+           "Sorry, this pokemon could not be found in Paris.",
+           "")
+  })
+  
 })
